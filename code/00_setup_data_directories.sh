@@ -22,7 +22,7 @@ openssl rand -hex 6 -out project_id
 
 ## link the containers
 echo "linking singularity containers"
-CONTAINER_DIR=/scratch/a/arisvoin/arisvoin/mlepage/containers
+CONTAINER_DIR=/home/edickie/project/edickie/containers
 ln -s ${CONTAINER_DIR}/fmriprep-23.2.3.simg containers/fmriprep-23.2.3.simg
 
 ln -s ${CONTAINER_DIR}/mriqc-24.0.0.simg containers/mriqc-24.0.0.simg
@@ -61,11 +61,11 @@ fi
 
 
 ## copy in Erin's freesurfer licence
-cp /scratch/a/arisvoin/arisvoin/mlepage/fs_license/license.txt templates/.freesurfer.txt
+cp /home/edickie/project/edickie/fs_license/license.txt templates/.freesurfer.txt
 
 
 ## copy in Erin's templates
 echo "copying templates..this might take a bit"
-scp -r /scratch/a/arisvoin/arisvoin/mlepage/templateflow templates/.cache/
+scp -r /home/edickie/project/edickie/templateflow templates/.cache/
 
 cd ${CURRENT_DIR}
